@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "lint": "eslint --ext=.ts src/",
+    "test": "jest --config .jestrc.json",
     "dev": "npm run clean:dist && cd src/ && npm run dev",
     "build": "npm run clean:dist && cd src/ && npm run build",
     "clean": "npm run clean:dist && ns clean",
@@ -15,10 +16,16 @@
     "commit": "git-cz"
   },
   "devDependencies": {
+    "@babel/core": "7.14.0",
+    "@babel/preset-env": "7.14.1",
+    "@babel/preset-typescript": "7.13.0",
     "@nativescript/eslint-plugin": "0.0.4",
+    "@types/jest": "26.0.23",
+    "babel-jest": "26.6.3",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.26.0",
+    "jest": "26.6.3",
     "nativescript": "8.0.1",
     "standard-version": "9.3.0"
   }

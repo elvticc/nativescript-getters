@@ -23,8 +23,8 @@
     "typescript": "4.2.4"
   },
   "peerDependencies": {
-    "@nativescript-community/ui-material-core": "5.x",
-    "@nativescript/core": "7.x"
+    "@nativescript-community/ui-material-core": ">=5.0.0",
+    "@nativescript/core": ">=7.0.0"
   },
   "peerDependenciesMeta": {
     "@nativescript-community/ui-material-core": {

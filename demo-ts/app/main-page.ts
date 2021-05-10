@@ -5,34 +5,10 @@ logic, and to set up your page’s data binding.
 */
 
 import { EventData, Page } from '@nativescript/core'
-import { HelloWorldModel } from './main-view-model'
 
-// Event handler for Page 'navigatingTo' event attached in main-page.xml
 export function navigatingTo(args: EventData) {
-  /*
-    This gets a reference this page’s <Page> UI component. You can
-    view the API reference of the Page to see what’s available at
-    https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
-    */
   const page = <Page>args.object
+  const layout = page.getViewsByTypes('layout')
 
-  // const foundViews = page.getViewsByTags('Button')
-  // console.log('foundViews:', foundViews)
-  // const buttonStyle = foundViews[0].style.background
-  // console.log('buttonStyle:', buttonStyle)
-
-  const foundViews = page.getViewsByTypes('form', 'layout')
-  console.log('foundViews:', foundViews)
-
-  /*
-    A page’s bindingContext is an object that should be used to perform
-    data binding between XML markup and TypeScript code. Properties
-    on the bindingContext can be accessed using the {{ }} syntax in XML.
-    In this example, the {{ message }} and {{ onTap }} bindings are resolved
-    against the object returned by createViewModel().
-
-    You can learn more about data binding in NativeScript at
-    https://docs.nativescript.org/core-concepts/data-binding.
-    */
-  page.bindingContext = new HelloWorldModel()
+  console.log('layout:', layout)
 }

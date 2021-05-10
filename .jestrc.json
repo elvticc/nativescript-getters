@@ -1,0 +1,6 @@
+{
+  "roots": [
+    "./tests"
+  ],
+  "verbose": true
+}
